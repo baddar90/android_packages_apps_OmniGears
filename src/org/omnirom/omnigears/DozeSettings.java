@@ -17,12 +17,17 @@
 */
 package org.omnirom.omnigears;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.content.Context;
+import android.graphics.Color;
 import android.content.Intent;
 import android.content.res.Resources;
 import androidx.preference.Preference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
@@ -31,6 +36,9 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import com.android.settingslib.Utils;
+
+import org.omnirom.omnilib.preference.ColorSelectPreference;
 import org.omnirom.omnilib.preference.SeekBarPreference;
 import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 
@@ -43,9 +51,16 @@ public class DozeSettings extends SettingsPreferenceFragment implements
     private static final String TAG = "DozeSettings";
     private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
     private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
+    private static final String PULSE_COLOR_PREF = "ambient_notification_light_color";
+    private static final String AMBIENT_NOTIFICATION_LIGHT_ACCENT_PREF = "ambient_notification_light_accent";
 
     private SeekBarPreference mPulseBrightness;
     private SeekBarPreference mDozeBrightness;
+
+    private ColorSelectPreference mPulseLightColorPref;
+    private static final int MENU_RESET = Menu.FIRST;
+    private int mDefaultColor;
+    private int mColor;
 
     @Override
     public int getMetricsCategory() {
@@ -53,10 +68,17 @@ public class DozeSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.doze_settings);
 
+        mDefaultColor = getResources().getInteger(
+                com.android.internal.R.integer.config_ambientNotificationDefaultColor);
         int defaultDoze = getResources().getInteger(
                 com.android.internal.R.integer.config_screenBrightnessDoze);
         int defaultPulse = getResources().getInteger(
@@ -76,6 +98,38 @@ public class DozeSettings extends SettingsPreferenceFragment implements
                 Settings.System.OMNI_DOZE_BRIGHTNESS, defaultDoze);
         mDozeBrightness.setValue(value);
         mDozeBrightness.setOnPreferenceChangeListener(this);
+
+        setHasOptionsMenu(true);
+
+        mPulseLightColorPref = (ColorSelectPreference) findPreference(PULSE_COLOR_PREF);
+        mColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_NOTIFICATION_PULSE_COLOR, mDefaultColor);
+        mPulseLightColorPref.setColor(mColor);
+        mPulseLightColorPref.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.reset)
+                .setIcon(R.drawable.ic_settings_backup_restore)
+                .setAlphabeticShortcut('r')
+                .setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET:
+                resetToDefaults();
+                return true;
+        }
+        return false;
+    }
+
+    protected void resetToDefaults() {
+        Settings.System.putInt(getContentResolver(), Settings.System.OMNI_NOTIFICATION_PULSE_COLOR,
+                mDefaultColor);
+        mPulseLightColorPref.setColor(mDefaultColor);
     }
 
     @Override
@@ -95,8 +149,19 @@ public class DozeSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.OMNI_DOZE_BRIGHTNESS, value);
             return true;
+        } else if (preference == mPulseLightColorPref) {
+            ColorSelectPreference lightPref = (ColorSelectPreference) preference;
+            Settings.System.putInt(getContentResolver(),
+                     Settings.System.OMNI_NOTIFICATION_PULSE_COLOR, lightPref.getColor());
+            mColor = lightPref.getColor();
+            mPulseLightColorPref.setColor(mColor);
+            return true;
         }
         return true;
+    }
+
+    private void refreshView() {
+        getFragmentManager().beginTransaction().detach(this).attach(this).commit();
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
