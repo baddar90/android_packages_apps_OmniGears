@@ -55,10 +55,12 @@ public class DozeSettings extends SettingsPreferenceFragment implements
     private static final String PULSE_COLOR_PREF = "ambient_notification_light_color";
     private static final String AMBIENT_NOTIFICATION_LIGHT_ACCENT_PREF = "ambient_notification_light_accent";
     private static final String PULSE_TIMEOUT_PREF = "ambient_notification_light_timeout";
+    private static final String PULSE_COLOR_MODE_PREF = "ambient_notification_light_color_mode";
 
     private SeekBarPreference mPulseBrightness;
     private SeekBarPreference mDozeBrightness;
     private ListPreference mPulseTimeout;
+    private ListPreference mColorMode;
     private ColorSelectPreference mPulseLightColorPref;
     private static final int MENU_RESET = Menu.FIRST;
     private int mDefaultColor;
@@ -116,6 +118,23 @@ public class DozeSettings extends SettingsPreferenceFragment implements
         mPulseTimeout.setValue(Integer.toString(value));
         mPulseTimeout.setSummary(mPulseTimeout.getEntry());
         mPulseTimeout.setOnPreferenceChangeListener(this);
+
+        mColorMode = (ListPreference) findPreference(PULSE_COLOR_MODE_PREF);
+        boolean colorModeAutomatic = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_NOTIFICATION_PULSE_COLOR_AUTOMATIC, 0) != 0;
+        boolean colorModeAccent = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_NOTIFICATION_PULSE_ACCENT, 0) != 0;
+        if (colorModeAutomatic) {
+            value = 0;
+        } else if (colorModeAccent) {
+            value = 1;
+        } else {
+            value = 2;
+       }
+
+        mColorMode.setValue(Integer.toString(value));
+        mColorMode.setSummary(mColorMode.getEntry());
+        mColorMode.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -173,8 +192,29 @@ public class DozeSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.OMNI_AOD_NOTIFICATION_PULSE_TIMEOUT, value);
             return true;
+        } else if (preference == mColorMode) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mColorMode.findIndexOfValue((String) newValue);
+            mColorMode.setSummary(mColorMode.getEntries()[index]);
+            if (value == 0) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_COLOR_AUTOMATIC, 1);
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_ACCENT, 0);
+            } else if (value == 1) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_COLOR_AUTOMATIC, 0);
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_ACCENT, 1);
+            } else {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_COLOR_AUTOMATIC, 0);
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.OMNI_NOTIFICATION_PULSE_ACCENT, 0);
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 
     private void refreshView() {
