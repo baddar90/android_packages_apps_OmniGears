@@ -81,8 +81,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
-        final boolean buttonLights = getResources().getBoolean(
-                com.android.internal.R.bool.config_button_brightness_support);
+        final boolean buttonLights = false; // getResources().getBoolean(
+//                com.android.internal.R.bool.config_button_brightness_support);
         final PreferenceCategory keysCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
         final PreferenceCategory otherCategory =
