@@ -465,6 +465,7 @@
     <string name="volume_button_force_media_summary">Hlasitost médií bude změněna na výchozí</string>
     <string name="status_bar_logo_title">Logo stavové lišty</string>
     <string name="status_bar_logo_summary">Bonus funkce</string>
+    <string name="doze_settings_title">Ambientní displej</string>
     <string name="DESC_INACTIVE_TIMEOUT">Když se zařízení stane neaktivním, po uplynutí tohoto času začneme kontrolovat snímač pohybu, abychom zjistili, zda zařízení zůstalo v klidu. Nemůžeme to udělat ihned poté, co se stane neaktivním, protože nechceme nepřetržitě kontrolovat důležitý snímač pohybu, když je obrazovka vypnutá</string>
     <string name="DESC_SENSING_TIMEOUT">Pokud nedostaneme zpětné volání z AnyMotion v této lhůtě + locating_to, změníme STATE_SENSING na STATE_INACTIVE a libovolné zpětné volání AnyMotion, které nejsou ve STATE_SENSING, budou ignorovány</string>
     <string name="DESC_LOCATING_TIMEOUT">Určuje, jak dlouho se bude čekat, dokud se pokusí dosáhnout dobré fixace polohy předtím, než přejde do režimu nečinnosti</string>
@@ -723,7 +724,12 @@
     <string name="fingerprint_settings_title">Otisk prstu</string>
     <string name="fingerprint_category_custom_icon">Vlastní ikona</string>
     <string name="fingerprint_custom_icon_select">Vybrat vlastní soubor</string>
+    <string name="ambient_pulse_brightness_title">Jas oznámení</string>
+    <string name="ambient_pulse_brightness_summary">Nastavte jas, který se použije při zobrazování nových oznámení</string>
+    <string name="ambient_doze_brightness_title">Jas při režimu Vždy zapnuto</string>
+    <string name="ambient_doze_brightness_summary">Nastavte jas, který se má použít při režimu Vždy zapnuto</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">Zobrazit režim Vždy zapnuto při nabíjení</string>
     <string name="doze_on_charge_summary">Probudit obrazovku při nabíjení</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Úroveň rozostření obalu interpreta</string>
@@ -733,4 +739,26 @@
     <string name="omni_remote_summary">Server VNC umožňuje vzdálené připojení k zařízení</string>
     <string name="show_rotation_suggestions_title">Zobrazit návrhy otáčení</string>
     <string name="show_rotation_suggestions_summary">V uzamčeném režimu otáčení</string>
+    <string name="pulse_ambient_light_title">Zobrazit při novém oznámení</string>
+    <string name="pulse_ambient_light_summary">Zobrazit světelné pulsování při novém oznámení</string>
+    <string name="ambient_notification_light_enabled_title">Zobrazit Vždy zapnuto</string>
+    <string name="ambient_notification_light_enabled_summary">Zobrazit světelné pulsování při novém oznámení pomocí režimu Vždy zapnuto</string>
+    <string name="pulse_ambient_light_note">Probuzení obrazovky při příchodu nových oznámení musí být zapnuto</string>
+    <string name="ambient_brigthness_category_title">Jas podsvícení obrazovky</string>
+    <string name="pulse_ambient_category_title">Světelné pulsování při oznámení</string>
+    <string name="ambient_notification_light_hide_aod_title">Zobrazit pouze světelné pulsování</string>
+    <string name="ambient_notification_light_hide_aod_summary">Skryjte všechny ostatní prvky z režimu Vždy zapnuto</string>
+    <string name="ambient_notification_light_color_title">Vlastní barva</string>
+    <string name="ambient_notification_light_color_summary">Výchozí barva pro světelné pulsování</string>
+    <string name="ambient_notification_light_timeout_title">Časový limit pro pulsování světla</string>
+    <string name="entry_infinite">Nekonečno</string>
+    <string name="entry_five_minute">5 minut</string>
+    <string name="entry_ten_minute">10 minut</string>
+    <string name="entry_thirty_minute">30 minut</string>
+    <string name="entry_sixty_minute">60 minut</string>
+    <string name="entry_fifteen_minute">15 minut</string>
+    <string name="ambient_notification_light_color_mode_title">Barva pulsování světla</string>
+    <string name="ambient_notification_light_color_mode_automatic">Barva oznámení</string>
+    <string name="ambient_notification_light_color_mode_accent">Systémová barva zvýraznění</string>
+    <string name="ambient_notification_light_color_mode_custom">Vlastní barva</string>
 </resources>

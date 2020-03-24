@@ -462,6 +462,7 @@
     <string name="volume_button_force_media_summary">Głośność multimediów zostanie zmieniona na domyślną</string>
     <string name="status_bar_logo_title">Logo na pasku statusu</string>
     <string name="status_bar_logo_summary">Odrobina swagu</string>
+    <string name="doze_settings_title">Ekran dostosowany do otoczenia</string>
     <string name="DESC_INACTIVE_TIMEOUT">Jest to pewien czas po przejściu urządzenia w tryb spoczynku, kiedy zaczynamy obserować czujnik ruchu, aby określić, czy urządzenie jest pozostawione same. Nie robimy to od razu po przejściu w tryb nieaktywności, gdyż nie chcemy, żeby czujnik ruchu działał za każdym razem, gdy ekran jest wyłączony</string>
     <string name="DESC_SENSING_TIMEOUT">Jeśli nie otrzymamy w tym czasie odpowiedzi zwrotnej od AnyMotion i od locating_to, zmienimy STATE_SENSING do STATE_INACTIVE, i będą ignorowane wszystkie odpowiedzi zwrotne od AnyMotion, gdy nie będziemy w STATE_SENSING</string>
     <string name="DESC_LOCATING_TIMEOUT">Jest to czas, jaki będziemy czekać, aby złapać dobry fix Gps, zanim przejdziemy w tryb bezczynności</string>
@@ -720,7 +721,12 @@
     <string name="fingerprint_settings_title">Odcisk palca</string>
     <string name="fingerprint_category_custom_icon">Własna ikona</string>
     <string name="fingerprint_custom_icon_select">Wybierz własny plik</string>
+    <string name="ambient_pulse_brightness_title">Jasność powiadomień</string>
+    <string name="ambient_pulse_brightness_summary">Ustaw jasność do wyświetlania nowych powiadomień</string>
+    <string name="ambient_doze_brightness_title">Jasność trybu dostosowanego do otoczenia</string>
+    <string name="ambient_doze_brightness_summary">Ustaw jasność dla trybu dostosowanego do otoczenia</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">Wyświetl tryb dostosowany do otoczenia podczas ładowania</string>
     <string name="doze_on_charge_summary">Wybudź ekran podczas ładowania</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Poziom rozmycia grafiki multimediów</string>
@@ -730,4 +736,26 @@
     <string name="omni_remote_summary">Serwer VNC, aby pozwolić na zdalne połączenie z urządzeniem</string>
     <string name="show_rotation_suggestions_title">Pokaż sugestie obrotu</string>
     <string name="show_rotation_suggestions_summary">W zablokowanym trybie obrotu</string>
+    <string name="pulse_ambient_light_title">Wyświetl tryb dostosowany do otoczenia po otrzymaniu powiadomienia</string>
+    <string name="pulse_ambient_light_summary">Włącz diodę LED po otrzymaniu powiadomienia</string>
+    <string name="ambient_notification_light_enabled_title">Zawsze wyświetlaj w trybie dostosowanym do otoczenia</string>
+    <string name="ambient_notification_light_enabled_summary">Włącz diodę LED po otrzymaniu powiadomienia w trybie dostosowanym do otoczenia</string>
+    <string name="pulse_ambient_light_note">Wybudzenie ekranu po otrzymaniu nowych powiadomień musi być włączone</string>
+    <string name="ambient_brigthness_category_title">Jasność ekranu</string>
+    <string name="pulse_ambient_category_title">Powiadomienia za pomocą diody LED</string>
+    <string name="ambient_notification_light_hide_aod_title">Pokaż tylko powiadomienie za pomocą diody LED</string>
+    <string name="ambient_notification_light_hide_aod_summary">Ukryj wszystkie inne elementy wyświetlane w trybie dostosowanym do otoczenia</string>
+    <string name="ambient_notification_light_color_title">Kolor niestandardowy</string>
+    <string name="ambient_notification_light_color_summary">Domyślny kolor diody LED</string>
+    <string name="ambient_notification_light_timeout_title">Limit czasu dla diody LED</string>
+    <string name="entry_infinite">Nieskończony</string>
+    <string name="entry_five_minute">5 minut</string>
+    <string name="entry_ten_minute">10 minut</string>
+    <string name="entry_thirty_minute">30 minut</string>
+    <string name="entry_sixty_minute">60 minut</string>
+    <string name="entry_fifteen_minute">15 minut</string>
+    <string name="ambient_notification_light_color_mode_title">Kolor diody LED</string>
+    <string name="ambient_notification_light_color_mode_automatic">Kolor powiadomienia</string>
+    <string name="ambient_notification_light_color_mode_accent">Kolor akcentu systemowego</string>
+    <string name="ambient_notification_light_color_mode_custom">Kolor niestandardowy</string>
 </resources>

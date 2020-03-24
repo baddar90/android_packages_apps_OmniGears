@@ -462,6 +462,7 @@
     <string name="volume_button_force_media_summary">Medienlautstärke wird standardmäßig geändert</string>
     <string name="status_bar_logo_title">Statusleisten Logo</string>
     <string name="status_bar_logo_summary">Bonus-Feature</string>
+    <string name="doze_settings_title">Inaktivitätsdisplay</string>
     <string name="DESC_INACTIVE_TIMEOUT">Dies ist die Zeit nach Beginn der Inaktivität, bei der wir uns den Bewegungssensor ansehen, um festzustellen, ob das Gerät in Ruhe gelassen wurde. Wir machen das nicht sofort nach dem Inaktivieren, da wir den signifikanten Bewegungssensor nicht ständig laufen lassen wollen, wenn der Bildschirm ausgeschaltet ist</string>
     <string name="DESC_SENSING_TIMEOUT">Wenn wir in dieser Zeitspanne keinen Rückruf von AnyMotion + locating_to erhalten, werden wir von STATE_SENSING zu STATE_INACTIVE wechseln. AnyMotion-Rückrufe, die nicht in STATE_SENSING enthalten sind, werden ignoriert</string>
     <string name="DESC_LOCATING_TIMEOUT">So lange werden wir warten, bis wir eine gute Standortbestimmung gefunden haben, bevor wir in den Leerlaufmodus gehen</string>
@@ -720,7 +721,12 @@
     <string name="fingerprint_settings_title">Fingerabdruck</string>
     <string name="fingerprint_category_custom_icon">Benutzerdefiniertes Symbol</string>
     <string name="fingerprint_custom_icon_select">Eigene Datei auswählen</string>
+    <string name="ambient_pulse_brightness_title">Benachrichtigungshelligkeit</string>
+    <string name="ambient_pulse_brightness_summary">Helligkeit setzen, die bei einer Benachrichtigung genutzt wird</string>
+    <string name="ambient_doze_brightness_title">Helligkeit beim Always on Display</string>
+    <string name="ambient_doze_brightness_summary">Setze die Helligkeit für das Always on Display fest</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">Always on Display beim Laden anzeigen</string>
     <string name="doze_on_charge_summary">Bildschirm beim Laden aufwecken</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Medien-Bild Unschärfe Level</string>
@@ -730,4 +736,26 @@
     <string name="omni_remote_summary">VNC-Server, um eine Remote-Verbindung zum Gerät zu erlauben</string>
     <string name="show_rotation_suggestions_title">Rotationsvorschläge anzeigen</string>
     <string name="show_rotation_suggestions_summary">Im gesperrten Rotationsmodus</string>
+    <string name="pulse_ambient_light_title">Bei neuer Benachrichtigung anzeigen</string>
+    <string name="pulse_ambient_light_summary">Pulse-Licht bei neuer Benachrichtigung anzeigen</string>
+    <string name="ambient_notification_light_enabled_title">Always on Display immer anzeigen</string>
+    <string name="ambient_notification_light_enabled_summary">Pulse-Licht bei neuer Benachrichtigung im Always on Display anzeigen</string>
+    <string name="pulse_ambient_light_note">Bildschirm bei neuen Benachrichtigungen wecken muss angeschaltet sein</string>
+    <string name="ambient_brigthness_category_title">Bildschirmhelligkeit</string>
+    <string name="pulse_ambient_category_title">Benachrichtigungs Pulse-Licht</string>
+    <string name="ambient_notification_light_hide_aod_title">Nur Pulse-Licht anzeigen</string>
+    <string name="ambient_notification_light_hide_aod_summary">Verstecke alle anderen Anzeigeelemente beim Always on Display</string>
+    <string name="ambient_notification_light_color_title">Benutzerdefinierte Farbe</string>
+    <string name="ambient_notification_light_color_summary">Standardfarbe für Pulse-Licht</string>
+    <string name="ambient_notification_light_timeout_title">Timeout für Pulse-Licht</string>
+    <string name="entry_infinite">Unendlich</string>
+    <string name="entry_five_minute">5 Minuten</string>
+    <string name="entry_ten_minute">10 Minuten</string>
+    <string name="entry_thirty_minute">30 Minuten</string>
+    <string name="entry_sixty_minute">60 Minuten</string>
+    <string name="entry_fifteen_minute">15 Minuten</string>
+    <string name="ambient_notification_light_color_mode_title">Pulse-Licht Farbe</string>
+    <string name="ambient_notification_light_color_mode_automatic">Benachrichtigungsfarbe</string>
+    <string name="ambient_notification_light_color_mode_accent">System-Akzentfarbe</string>
+    <string name="ambient_notification_light_color_mode_custom">Benutzerdefinierte Farbe</string>
 </resources>

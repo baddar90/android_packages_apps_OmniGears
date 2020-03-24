@@ -462,6 +462,7 @@
     <string name="volume_button_force_media_summary">Кнопки громкости регулируют громкость мультимедиа</string>
     <string name="status_bar_logo_title">Логотип Omni в строке состояния</string>
     <string name="status_bar_logo_summary">Немного крутости</string>
+    <string name="doze_settings_title">Активный экран</string>
     <string name="DESC_INACTIVE_TIMEOUT">Это время, после после которого оно становится неактивным, и мы начинаем смотреть на датчик движения, чтобы определить, перестали ли вы пользоваться устройством. Мы не делаем это сразу, потому что не хотим, чтобы постоянно датчик движения работал постоянно, когда экран выключен</string>
     <string name="DESC_SENSING_TIMEOUT">Если мы не получим обратный вызов из AnyMotion за такое количество времени + locating_to, мы изменим его с STATE_SENSING на STATE_INACTIVE, и любые обратные вызовы AnyMotion, пока они не находятся в STATE_SENSING, будут проигнорированы</string>
     <string name="DESC_LOCATING_TIMEOUT">Как долго мы будем ждать, чтобы попытаться получить хорошую точность местоположения, прежде чем переходить в режим ожидания</string>
@@ -720,7 +721,12 @@
     <string name="fingerprint_settings_title">Отпечаток</string>
     <string name="fingerprint_category_custom_icon">Пользовательский значок</string>
     <string name="fingerprint_custom_icon_select">Выберите пользовательский файл</string>
+    <string name="ambient_pulse_brightness_title">Яркость уведомлений</string>
+    <string name="ambient_pulse_brightness_summary">Установить яркость при отображении новых уведомлений</string>
+    <string name="ambient_doze_brightness_title">Яркость AOD</string>
+    <string name="ambient_doze_brightness_summary">Установите яркость AOD</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">Показывать AOD при зарядке</string>
     <string name="doze_on_charge_summary">Пробуждение экрана во время зарядки</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Степень размытия медиа-обложки</string>
@@ -730,4 +736,26 @@
     <string name="omni_remote_summary">Сервер VNC для удаленного подключения к устройству</string>
     <string name="show_rotation_suggestions_title">Показать подсказки вращения</string>
     <string name="show_rotation_suggestions_summary">В заблокированном режиме вращения</string>
+    <string name="pulse_ambient_light_title">Показывать при новом уведомлении</string>
+    <string name="pulse_ambient_light_summary">Показывать свечение при новом уведомлении</string>
+    <string name="ambient_notification_light_enabled_title">Показывать на AOD</string>
+    <string name="ambient_notification_light_enabled_summary">Показывать свечение при новом уведомлении, используя AOD</string>
+    <string name="pulse_ambient_light_note">Включать экран при получении новых уведомлений</string>
+    <string name="ambient_brigthness_category_title">Яркость экрана</string>
+    <string name="pulse_ambient_category_title">Уведомление свечением</string>
+    <string name="ambient_notification_light_hide_aod_title">Показывать только свечение</string>
+    <string name="ambient_notification_light_hide_aod_summary">Скрыть все остальные элементы экрана AOD</string>
+    <string name="ambient_notification_light_color_title">Пользовательский цвет</string>
+    <string name="ambient_notification_light_color_summary">Цвет по умолчанию для свечения</string>
+    <string name="ambient_notification_light_timeout_title">Таймаут для свечения</string>
+    <string name="entry_infinite">Бесконечный</string>
+    <string name="entry_five_minute">5 минут</string>
+    <string name="entry_ten_minute">10 минут</string>
+    <string name="entry_thirty_minute">30 минут</string>
+    <string name="entry_sixty_minute">60 минут</string>
+    <string name="entry_fifteen_minute">15 минут</string>
+    <string name="ambient_notification_light_color_mode_title">Цвет свечения</string>
+    <string name="ambient_notification_light_color_mode_automatic">Цвет уведомления</string>
+    <string name="ambient_notification_light_color_mode_accent">Цвет акцента системы</string>
+    <string name="ambient_notification_light_color_mode_custom">Пользовательский цвет</string>
 </resources>

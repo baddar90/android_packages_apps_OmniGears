@@ -462,6 +462,7 @@
     <string name="volume_button_force_media_summary">メディア音量は規定値に変更されます</string>
     <string name="status_bar_logo_title">ステータスバーのロゴ</string>
     <string name="status_bar_logo_summary">A little swag</string>
+    <string name="doze_settings_title">アンビエント画面</string>
     <string name="DESC_INACTIVE_TIMEOUT">これは端末が単独で放置されているかどうかを判断するためにモーションセンサーを調べ始める、非アクティブになってからの時間です。 私たちは、画面オフの時はいつでも重要なモーションセンサーを継続的に実行したくないという理由だけで、非アクティブになった直後にこれを行うわけではありません。</string>
     <string name="DESC_SENSING_TIMEOUT">この時間内にAnyMotionからコールバックを受信しなかった場合は、STATE_SENSINGからSTATE_INACTIVEに変更され、STATE_SENSING以外のAnyMotionコールバックは無視されます。</string>
     <string name="DESC_LOCATING_TIMEOUT">これはアイドルモードに入る前に、良い位置情報の修正を得るのを待つのにかかる時間です。</string>
@@ -720,7 +721,12 @@
     <string name="fingerprint_settings_title">指紋</string>
     <string name="fingerprint_category_custom_icon">カスタムアイコン</string>
     <string name="fingerprint_custom_icon_select">カスタムファイルを選択</string>
+    <string name="ambient_pulse_brightness_title">通知の明るさ</string>
+    <string name="ambient_pulse_brightness_summary">新規通知時に使用する明るさを設定する</string>
+    <string name="ambient_doze_brightness_title">Always On の明るさ</string>
+    <string name="ambient_doze_brightness_summary">Always On の明るさを設定する</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">充電中は Always On を表示</string>
     <string name="doze_on_charge_summary">充電時に画面を復帰する</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">メディアアートのぼかしレベル</string>
@@ -730,4 +736,26 @@
     <string name="omni_remote_summary">端末へのリモート接続を許可する VNC サーバー</string>
     <string name="show_rotation_suggestions_title">端末回転の検知を表示</string>
     <string name="show_rotation_suggestions_summary">回転ロック時に有効です</string>
+    <string name="pulse_ambient_light_title">新しい通知を表示</string>
+    <string name="pulse_ambient_light_summary">新規通知時にライトを点滅表示する</string>
+    <string name="ambient_notification_light_enabled_title">Always On 時の表示</string>
+    <string name="ambient_notification_light_enabled_summary">Always On 使用時に新規通知をライトを点滅表示する</string>
+    <string name="pulse_ambient_light_note">新規通知の受信時に画面復帰を有効にする必要があります</string>
+    <string name="ambient_brigthness_category_title">画面の明るさ</string>
+    <string name="pulse_ambient_category_title">通知ライトの点滅</string>
+    <string name="ambient_notification_light_hide_aod_title">ライトの点滅のみ表示</string>
+    <string name="ambient_notification_light_hide_aod_summary">Always On で画面に表示する要素を全て隠す</string>
+    <string name="ambient_notification_light_color_title">カスタムカラー</string>
+    <string name="ambient_notification_light_color_summary">ライト点滅の既定の色</string>
+    <string name="ambient_notification_light_timeout_title">ライト点滅の表示時間</string>
+    <string name="entry_infinite">無限</string>
+    <string name="entry_five_minute">5分</string>
+    <string name="entry_ten_minute">10分</string>
+    <string name="entry_thirty_minute">30分</string>
+    <string name="entry_sixty_minute">60 minutes</string>
+    <string name="entry_fifteen_minute">15分</string>
+    <string name="ambient_notification_light_color_mode_title">ライト点滅の色</string>
+    <string name="ambient_notification_light_color_mode_automatic">通知の色</string>
+    <string name="ambient_notification_light_color_mode_accent">システムアクセントカラー</string>
+    <string name="ambient_notification_light_color_mode_custom">カスタムカラー</string>
 </resources>
