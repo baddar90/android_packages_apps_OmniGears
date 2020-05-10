@@ -368,7 +368,7 @@
     <string name="notification_light_zen_mode">マナーモード時は点灯させる</string>
     <string name="notification_light_use_multiple_leds">複数のLED</string>
     <string name="keywords_lights_brightness_level">暗いLEDの明るさ</string>
-    <string name="notification_light_automagic">自動カラー</string>
+    <string name="notification_light_automagic">色の自動設定</string>
     <string name="notification_light_automagic_summary">アプリにカスタム値がない場合はLED通知に適切な色を自動的に設定します</string>
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">ライトの設定</string>
@@ -536,7 +536,7 @@
     <string name="double_tap_sleep_lockscreen_title">ロック画面をダブルタップしてスリープ</string>
     <string name="double_tap_sleep_lockscreen_summary">ロック画面上をダブルタップして端末をスリープにする</string>
     <string name="screen_off_animation_fade">シンプルフェード</string>
-    <string name="screen_off_animation_color">カラーフェード</string>
+    <string name="screen_off_animation_color">色のフェード</string>
     <string name="screen_off_animation_crt">ブラウン管</string>
     <string name="screen_off_animation_scale">縮小</string>
     <string name="screen_off_animation_title">スクリーンオフアニメーション</string>
@@ -708,7 +708,7 @@
     <string name="recents_tasks_visible_disable_title">アプリ履歴の上限を無効化</string>
     <string name="recents_tasks_visible_disable_summary">時間やサイズの制限を無効化して全てのアプリ履歴を表示する</string>
     <!-- Display Manager -->
-    <string name="omni_display_manager">ディスプレイカラー</string>
+    <string name="omni_display_manager">ディスプレイ色</string>
     <!-- Dialer Setting -->
     <string name="dialer_settings_title">ダイアラー</string>
     <string name="incall_vibrate_connect_title">接続時に振動</string>
@@ -745,7 +745,7 @@
     <string name="pulse_ambient_category_title">通知ライトの点滅</string>
     <string name="ambient_notification_light_hide_aod_title">ライトの点滅のみ表示</string>
     <string name="ambient_notification_light_hide_aod_summary">Always On で画面に表示する要素を全て隠す</string>
-    <string name="ambient_notification_light_color_title">カスタムカラー</string>
+    <string name="ambient_notification_light_color_title">カスタム色</string>
     <string name="ambient_notification_light_color_summary">ライト点滅の既定の色</string>
     <string name="ambient_notification_light_timeout_title">ライト点滅の表示時間</string>
     <string name="entry_infinite">無限</string>
@@ -757,5 +757,5 @@
     <string name="ambient_notification_light_color_mode_title">ライト点滅の色</string>
     <string name="ambient_notification_light_color_mode_automatic">通知の色</string>
     <string name="ambient_notification_light_color_mode_accent">システムアクセントカラー</string>
-    <string name="ambient_notification_light_color_mode_custom">カスタムカラー</string>
+    <string name="ambient_notification_light_color_mode_custom">カスタム色</string>
 </resources>
