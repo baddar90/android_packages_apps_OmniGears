@@ -50,12 +50,15 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import com.android.settingslib.search.SearchIndexable;
+
 import java.io.FileDescriptor;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+@SearchIndexable
 public class FingerprintSettings extends SettingsPreferenceFragment implements
     OnPreferenceChangeListener, Indexable {
     private static final String TAG = "FingerprintSettings";

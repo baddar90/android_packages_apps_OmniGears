@@ -31,12 +31,15 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import com.android.settingslib.search.SearchIndexable;
+
 import org.omnirom.omnilib.preference.SeekBarPreference;
 import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 
 import java.util.List;
 import java.util.ArrayList;
 
+@SearchIndexable
 public class LockscreenItemSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 

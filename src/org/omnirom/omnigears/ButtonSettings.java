@@ -45,12 +45,15 @@ import com.android.settings.dashboard.SummaryLoader;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import com.android.settingslib.search.SearchIndexable;
+
 import com.android.internal.util.omni.OmniSwitchConstants;
 import com.android.internal.util.omni.PackageUtils;
 import com.android.internal.util.omni.DeviceUtils;
 
 import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 
+@SearchIndexable
 public class ButtonSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
 
     private static final String CATEGORY_KEYS = "button_keys";

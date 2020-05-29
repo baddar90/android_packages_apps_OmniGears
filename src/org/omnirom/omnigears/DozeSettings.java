@@ -38,6 +38,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
 import com.android.settingslib.Utils;
+import com.android.settingslib.search.SearchIndexable;
 
 import org.omnirom.omnilib.preference.ColorSelectPreference;
 import org.omnirom.omnilib.preference.SeekBarPreference;
@@ -46,6 +47,7 @@ import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 import java.util.List;
 import java.util.ArrayList;
 
+@SearchIndexable
 public class DozeSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
