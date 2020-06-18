@@ -241,6 +241,7 @@
     <string name="recents_fullscreen_title">전체 화면</string>
     <string name="weather_title">날씨</string>
     <string name="weather_config_title">날씨 서비스</string>
+    <string name="weather_config_summary">시스템 서비스 설정</string>
     <string name="header_weather_title">헤더에 날씨 보기</string>
     <string name="header_weather_summary">알림 패널 헤더에 날씨를 표시합니다.</string>
     <string name="weather_icon_pack_title">상태 아이콘 팩</string>
@@ -278,14 +279,28 @@
     <!--<string name="screenshot_crop_behavior_title"></string>
     <string name="screenshot_crop_behavior_summary"></string>-->
     <string name="lockscreen_power_menu_disabled_title">기기가 잠겨있을 때 전원 메뉴 비활성화</string>
+    <string name="status_bar_quick_qs_pulldown_title">바로 열기</string>
     <string name="status_bar_quick_qs_pulldown_summary_left">왼쪽</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">오른쪽</string>
     <!-- Notification light dialogs -->
+    <string name="dialog_delete_message">선택한 항목을 제거할까요?</string>
     <!-- Values for the notification light pulse spinners -->
     <!-- Lights settings screen, notification light settings -->
+    <string name="omni_leds">LED</string>
+    <string name="omni_lights_title">알림 LED</string>
+    <string name="notification_light_title">알림 등</string>
+    <string name="notificationlight_title">알림 LED 설정</string>
     <string name="notification_light_general_title">일반</string>
+    <string name="notification_light_applist_title">앱</string>
+    <string name="notification_light_use_custom">사용자 지정 값</string>
+    <string name="notification_light_default_value">기본값</string>
+    <string name="notification_light_screen_on">화면이 켜져 있을 때 LED 켬</string>
+    <string name="notification_light_zen_mode">방해 금지 모드에서 LED 켬</string>
+    <string name="notification_light_automagic">자동 색상</string>
     <!-- Lights settings, LED notification -->
+    <string name="led_notification_title">LED 설정</string>
     <!-- Hostname setting -->
+    <string name="device_hostname">디바이스 호스트 이름</string>
     <!-- OMS -->
     <!-- Summaries -->
     <string name="custom_wall_browse_title">Omni 배경 화면</string>
