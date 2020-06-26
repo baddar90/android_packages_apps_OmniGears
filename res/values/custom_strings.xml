@@ -329,6 +329,9 @@
     <!-- Navigationbar settings -->
     <string name="navigationbar_title">Navigation bar</string>
 
+    <string name="navigation_bar_invert_layout_title">Invert layout</string>
+    <string name="navigation_bar_invert_layout_summary">Invert layout of navigation bar buttons</string>
+
     <!-- Enable Tablet Style navigation bar -->
     <string name="enable_tablet_navigation_title">Use tablet layout</string>
     <string name="enable_tablet_navigation_summary">Tablet layout shows back and home on the left side and overview on the right side of the navigation bar</string>
